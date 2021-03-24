@@ -4,7 +4,6 @@
 <title>Home</title>
 </head>
 <body>
-
 <h1>Hello <%
          Cookie cookie = null;
          Cookie[] cookies = null;
@@ -26,17 +25,17 @@
           }
       %> please select the operations listed below </h1><br><br>
 <h1> Enter the details of the fabric to be inserted  :</h1>
-<form action="Insert.jsp">
+<form action="Insert.html">
   <input type="submit" value="Insert" />
 </form>
 <h1> Enter the details of the fabric to be removed  :</h1>
 <br>
-<form action="Delete.jsp">
+<form action="Delete.html">
    <input type="submit" value="Remove" />
 </form>
 <h1> Enter the details of the fabric to be searched :</h1>
 <br>
-<form action="Search.jsp">
+<form action="Search.html">
     <input type="submit" value="Search" />
 </form>
 <br>
@@ -44,4 +43,3 @@
 <a href="Login"> Logout </a>
 </body>
 </html>
-

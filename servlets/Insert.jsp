@@ -1,4 +1,3 @@
-<body>
 <%
    Cookie type = new Cookie("type", request.getParameter("type"));
    Cookie color = new Cookie("color", request.getParameter("color"));
@@ -26,8 +25,8 @@
    
    <body>
    <h1>Added successfully</h1>
-   </body>
    <h1>Click below to logout </h1><br>
    <a href="Login"> Logout </a>
+   </body>
 
 </html>

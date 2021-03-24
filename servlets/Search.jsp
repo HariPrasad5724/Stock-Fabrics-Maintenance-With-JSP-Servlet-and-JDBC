@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,15 +6,23 @@
 </head>
 <body>
 <h1> Enter the details of the fabric to be inserted </h1>
-<form action="Home.jsp" method="GET">
-<h1>Fabric Type: <input type="text" name="type" /><br><br>
-Fabric Color: <input type="text" name="color" /><br><br>
-Fabric GSM: <input type="text" name="gsm" /><br><br>
-Fabric Weight: <input type="text" name="weight" /><br><br>
-Fabric Cost: <input type="text" name="cost" /><br><br>
-<input type="submit" value="Submit" /><br><br>
-<h1>Click below to logout </h1><br>
-<a href="Login"> Logout </a>
-</form>
+<h1><%
+         Cookie cookie = null;
+         Cookie[] cookies = null;
+         cookies = request.getCookies();
+         if( cookies != null ) {
+              for (int i = 0; i < cookies.length; i++) {
+                   cookie = cookies[i];
+                   String query = cookie.getValue();
+                    if (query.equals(request.getParameter("color"))&&query.equals(request.getParameter("type"))||query.equals(request.getParameter("gsm"))) {
+                        out.println("Stock found");
+                    }
+              }
+          }
+          else 
+          {
+                  out.println("Stock not found");
+          }
+      %></h1>
 </body>
 </html>
