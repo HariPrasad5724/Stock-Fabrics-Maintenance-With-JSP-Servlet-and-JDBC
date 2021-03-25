@@ -1,38 +1,43 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Remove Fabric</title>
-</head>
-<body>
+
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+
 <%
-         Cookie cookie = null;
-         Cookie[] cookies = null;
-         cookies = request.getCookies();
-         if( cookies != null ) {
-            for (int i = 0; i < cookies.length; i++) {
-               cookie = cookies[i];
-               if((cookie.getValue( )).compareTo("type") == 0 && (cookie.getValue( )).compareTo("color") == 0) {
-                  cookie.setMaxAge(0);
-                  response.addCookie(cookie);
-                  out.print("Deleted cookie: " + 
-                  cookie.getName( ) + "<br/>");
-               }
-               out.print("Name : " + cookie.getName( ) + ",  ");
-               out.print("Value: " + cookie.getValue( )+" <br/>");
-            }
-         } else {
-            out.println(
-            "<h2>No Stock founds</h2>");
-         }
-      %>
-<h1> Enter the details of the fabric to be removed </h1>
-<form action="Home.jsp" method="GET">
-<h1>Fabric Type: <input type="text" name="type" /><br><br>
-Fabric Color: <input type="text" name="color" /><br><br>
-Fabric GSM: <input type="text" name="gsm" /><br><br>
-<input type="submit" value="Submit" /><br><br>
-<h1>Click below to logout </h1><br>
-<a href="Login"> Logout </a>
-</form>
-</body>
+   String ftype=request.getParameter("type");
+   String fcolor=request.getParameter("color");
+   String fgsm=request.getParameter("gsm");
+   String fid="1";
+   try
+	     {
+                      Connection con=null;
+                      con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
+                      out.println("Connected to Database...");
+                      String sql = "delete from StockItems where fabtype='"+ftype+"' and color='"+fcolor+"' and gsm='"+fgsm+"' and stockid='"+fid+"'"; 
+                      PreparedStatement ps = con.prepareStatement(sql);
+                      ResultSet rs = ps.executeQuery();
+                      if(rs.next())
+                      {
+                            out.println("Fabric Removed Successfully!");
+                      }
+                      else
+                      {
+                            out.println("Try again!");
+                      }
+             }
+		catch(Exception e)
+		{
+                    out.println(e);
+		}
+%>
+<html>
+   <head>
+      <title>Remove Stock</title>
+   </head>
+   <body>
+   <h1>Removed the Fabric successfully</h1>
+   <h2>To logout click the button below</h2>
+      <br>
+      <form action="Login">
+          <input type="submit" value="Logout" />
+      </form>
 </html>

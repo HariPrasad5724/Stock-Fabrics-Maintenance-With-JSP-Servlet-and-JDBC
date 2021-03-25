@@ -39,7 +39,10 @@
     <input type="submit" value="Search" />
 </form>
 <br>
-<h1>Click below to logout </h1><br>
-<a href="Login"> Logout </a>
+<h2>To logout click the button below</h2>
+      <br>
+      <form action="Login">
+          <input type="submit" value="Logout" />
+      </form>
 </body>
 </html>
