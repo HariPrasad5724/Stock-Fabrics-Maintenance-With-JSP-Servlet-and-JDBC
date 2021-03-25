@@ -1,8 +1,8 @@
-
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 
 <%
+   //JDBC Delete
    String ftype=request.getParameter("type");
    String fcolor=request.getParameter("color");
    String fgsm=request.getParameter("gsm");
@@ -17,7 +17,7 @@
                       ResultSet rs = ps.executeQuery();
                       if(rs.next())
                       {
-                            out.println("Fabric Removed Successfully!");
+                            out.println("Removing Fabric from Database!");
                       }
                       else
                       {
@@ -26,7 +26,8 @@
              }
 		catch(Exception e)
 		{
-                    out.println(e);
+                    out.println("<h1>Fabric Not Found in the DB!</h1><br>");
+                    out.println("Error message: "+e);
 		}
 %>
 <html>
@@ -34,7 +35,12 @@
       <title>Remove Stock</title>
    </head>
    <body>
-   <h1>Removed the Fabric successfully</h1>
+   <h2>To Move Home click the button below</h2>
+      <br>
+      <form action="Home.jsp">
+          <input type="submit" value="Go to Home" />
+      </form>
+      <br>
    <h2>To logout click the button below</h2>
       <br>
       <form action="Login">

@@ -9,6 +9,7 @@
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%
+    //JDBC Search
    String ftype=request.getParameter("type");
    String fcolor=request.getParameter("color");
    String fgsm=request.getParameter("gsm");
@@ -35,6 +36,7 @@
 	     }
 %>
 <%
+         //Search in Cookies
          Cookie cookie = null;
          Cookie[] cookies = null;
          cookies = request.getCookies();
@@ -48,6 +50,11 @@
               }
           }
       %></h1>
+      <h2>To Move Home click the button below</h2>
+      <br>
+      <form action="Home.jsp">
+          <input type="submit" value="Go to Home" />
+      </form>
       <h2>To logout click the button below</h2>
       <br>
       <form action="Login">

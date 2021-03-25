@@ -19,9 +19,10 @@ public class Login extends HttpServlet {
         out.println("<body>");
         out.println("<br><h1>Welcome to the Stock Portal</h1>");
         out.println("<form method=post>");
+        out.println("<br><h1>Enter your details below to login!</h1>");
         out.println("<br><h1>Username: <input type=text name=username></h1>");
         out.println("<br><h1>Password: <input type=password name=password></h1>");
-        out.println("<br><input type=submit value=login>");
+        out.println("<br><h1><input type=submit value=Login></h1>");
         out.println("</form>");
         out.println("</body>");
         out.println("</html>");
@@ -36,7 +37,7 @@ public class Login extends HttpServlet {
         String password = req.getParameter("password");
         Cookie ck = new Cookie("username", username);
         res.addCookie(ck);
-        if (username.equals("admin") && password.equals("admin123")) {
+        if (username.equals("admin") && password.equals("imtheadmin!")) {
             RequestDispatcher rd = req.getRequestDispatcher("./main.jsp");
             rd.forward(req, res);
         } else {
