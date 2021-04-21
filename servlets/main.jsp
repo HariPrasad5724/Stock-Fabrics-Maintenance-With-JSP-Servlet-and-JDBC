@@ -14,8 +14,15 @@
       <br>
       <h2>To maintain Stock details click the button below</h2>
       <br>
-      <form action="Home.jsp">
+      <form action="Stock/Home.jsp">
           <input type="submit" value="Stock Maintenance" />
+      </form>
+      <br>
+      <br>
+      <h2>To maintain Bill details click the button below</h2>
+      <br>
+      <form action="Bill/Home.jsp">
+          <input type="submit" value="Bill Maintenance" />
       </form>
       <br>
       <h2>To logout click the button below</h2>

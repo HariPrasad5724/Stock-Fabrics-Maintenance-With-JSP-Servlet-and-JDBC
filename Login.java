@@ -38,7 +38,7 @@ public class Login extends HttpServlet {
         Cookie ck = new Cookie("username", username);
         res.addCookie(ck);
         if (password.equals("imtheadmin!")) {
-            RequestDispatcher rd = req.getRequestDispatcher("./servlets/main.jsp");
+            RequestDispatcher rd = req.getRequestDispatcher("./main.jsp");
             rd.forward(req, res);
         } else {
             showLoginForm(req, res);
