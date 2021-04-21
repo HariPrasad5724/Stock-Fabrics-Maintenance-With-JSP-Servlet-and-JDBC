@@ -35,7 +35,7 @@
 </form>
 <br>
 <h1> Enter the details of the bill to be searched  :</h1>
-<form action="Search.html">
+<form action="SearchBillno.html">
     <input type="submit" value="Search" />
 </form>
 <br>
