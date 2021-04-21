@@ -36,4 +36,23 @@
   <url-pattern>/servlets/Login</url-pattern>
   </servlet-mapping>
   
+  
+   <servlet>
+  <servlet-name>Update</servlet-name>
+  <servlet-class>Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Update</servlet-name>
+  <url-pattern>/servlets/Update</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>UpdateBean</servlet-name>
+  <servlet-class>UpdateBean</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UpdateBean</servlet-name>
+  <url-pattern>/servlets/UpdateBean</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
