@@ -17,13 +17,11 @@
 	        {
                       Connection con=null;
                       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
-                      out.println("Connected");
                       String sql = "select billno,customer_name,inccost from IncomeBills where day='"+day+"' and mon='"+mon+"' and year='"+year+"' ";    
                       PreparedStatement ps = con.prepareStatement(sql);
                       ResultSet rs = ps.executeQuery();
                       while(rs.next())
                       {
-                            out.println("Bill Available!\n");
                             out.println("Found Bill no:" + rs.getString(1)+" Customer name "+rs.getString(2)+" Income cost "+rs.getString(3));
                       }
              }
