@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search Fabric</title>
+  </head>
+  <body>
+    <h1>Enter the details of the fabric to be Searched</h1>
+    <form action="SearchViaDate.jsp" method="GET">
+      <h1>
+        Date(DD/MM/YY): <input type="number" name="day" />
+        <input type="text" name="month" />
+        <input type="number" name="year" />
+      </h1>
+      <br />
+      <h1>Bill Type: <input type="text" name="type" /></h1>
+      <br /><br />
+      <input type="submit" value="Search Bill" /><br />
+      <h2>To logout click the button below</h2>
+      <br />
+      <form action="Login">
+        <input type="submit" value="Logout" />
+      </form>
+    </form>
+  </body>
+</html>

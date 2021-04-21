@@ -17,7 +17,6 @@
         try
         {
                       Connection con=null;
-                      out.println("Connected");
                       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
                       String sql = "select customer_name,weight,inccost from IncomeBills where billno = '"+billno+"'";
                       PreparedStatement ps = con.prepareStatement(sql);
@@ -74,7 +73,7 @@
       </form>
       <h2>To logout click the button below</h2>
       <br>
-      <form action="Login">
+      <form action="../Login">
           <input type="submit" value="Logout" />
       </form>
 </body>
