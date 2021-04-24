@@ -25,6 +25,12 @@
           <input type="submit" id="bill" value="Bill Maintenance" />
       </form>
       <br>
+      <h2>To maintain Accounting details click the button below</h2>
+      <br>
+      <form action="./Accounts/Home.jsp">
+          <input type="submit" id="account" value="Accounting Finance" />
+      </form>
+      <br>
       <h2>To logout click the button below</h2>
       <br>
       <form action="Login">
