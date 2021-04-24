@@ -17,12 +17,12 @@ public class Login extends HttpServlet {
         out.println("<title>Login</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<br><h1>Welcome to the Stock Portal</h1>");
+        out.println("<br><h1>Welcome to the Stock and Bill Maintenance Portal</h1>");
         out.println("<form method=post>");
         out.println("<br><h1>Enter your details below to login!</h1>");
-        out.println("<br><h1>Username: <input type=text name=username></h1>");
-        out.println("<br><h1>Password: <input type=password name=password></h1>");
-        out.println("<br><h1><input type=submit value=Login></h1>");
+        out.println("<br><h1>Username: <input type=text name=username id=user></h1>");
+        out.println("<br><h1>Password: <input type=password name=password id=pwd></h1>");
+        out.println("<br><h1><input type=submit value=Login id=login></h1>");
         out.println("</form>");
         out.println("</body>");
         out.println("</html>");

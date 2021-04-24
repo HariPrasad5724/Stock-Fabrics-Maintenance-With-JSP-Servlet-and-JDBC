@@ -7,14 +7,14 @@
     <h1>Enter the details of the fabric to be Searched</h1>
     <form action="SearchViaDate.jsp" method="GET">
       <h1>
-        Date(DD/MM/YY): <input type="number" name="day" />
-        <input type="text" name="month" />
-        <input type="number" name="year" />
+        Date(DD/MM/YY): <input type="number" id="sday" name="day" />
+        <input type="text" id="smonth" name="month" />
+        <input type="number" id="syear" name="year" />
       </h1>
       <br />
-      <h1>Bill Type: <input type="text" name="type" /></h1>
+      <h1>Bill Type: <input type="text" id="stype" name="type" /></h1>
       <br /><br />
-      <input type="submit" value="Search Bill" /><br />
+      <input type="submit" id="searchviadate" value="Search Bill" /><br />
       <h2>To logout click the button below</h2>
       <br />
       <form action="Login">

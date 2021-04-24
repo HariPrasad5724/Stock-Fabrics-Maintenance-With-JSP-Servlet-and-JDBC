@@ -26,22 +26,22 @@
       %> please select the operations listed below </h1>
 <h1> Add the Sales Bill here :</h1>
 <form action="SalesInsert.html">
-  <input type="submit" value="Insert Sales Bills" />
+  <input type="submit" id="salesinsert" value="Insert Sales Bills" />
 </form>
 <br>
 <h1> Add the Purchase bills here</h1>
 <form action="PurchaseInsert.html">
-  <input type="submit" value="Insert Purchase Bills" />
+  <input type="submit" id="purchaseinsert" value="Insert Purchase Bills" />
 </form>
 <br>
 <h1> Enter the Bill no to Search  :</h1>
 <form action="SearchBillno.html">
-    <input type="submit" value="Search Bill no" />
+    <input type="submit" id="searchbillno" value="Search Bill no" />
 </form>
 <br>
 <h1> Enter the Date to be searched  :</h1>
 <form action="SearchViaDate.html">
-    <input type="submit" value="Search Date" />
+    <input type="submit" id="searchviadate" value="Search Date" />
 </form>
 <br>
 <h2>To logout click the button below</h2>

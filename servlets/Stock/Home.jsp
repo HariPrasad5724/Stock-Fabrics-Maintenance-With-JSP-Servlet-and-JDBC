@@ -26,17 +26,17 @@
       %> please select the operations listed below </h1><br><br>
 <h1> Enter the details of the fabric to be inserted  :</h1>
 <form action="Insert.html">
-  <input type="submit" value="Insert" />
+  <input type="submit" id="insertstock" value="Insert" />
 </form>
 <h1> Enter the details of the fabric to be removed  :</h1>
 <br>
 <form action="Delete.html">
-   <input type="submit" value="Remove" />
+   <input type="submit" id="removestock" value="Remove" />
 </form>
 <h1> Enter the details of the fabric to be searched :</h1>
 <br>
 <form action="Search.html">
-    <input type="submit" value="Search" />
+    <input type="submit" id="searchstock" value="Search" />
 </form>
 <br>
 <h2>To logout click the button below</h2>
