@@ -14,14 +14,14 @@
       <br>
       <h2>To maintain Stock details click the button below</h2>
       <br>
-      <form action="Stock/Home.jsp">
+      <form action="./Stock/Home.jsp">
           <input type="submit" id="stock" value="Stock Maintenance" />
       </form>
       <br>
       <br>
       <h2>To maintain Bill details click the button below</h2>
       <br>
-      <form action="Bill/Home.jsp">
+      <form action="./Bill/Home.jsp">
           <input type="submit" id="bill" value="Bill Maintenance" />
       </form>
       <br>
