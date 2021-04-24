@@ -69,11 +69,11 @@
       <h2>To Move Home click the button below</h2>
       <br>
       <form action="Home.jsp">
-          <input type="submit" value="Go to Home" />
+          <input type="submit" id="home" value="Go to Home" />
       </form>
       <h2>To logout click the button below</h2>
       <br>
-      <form action="../Login">
+      <form action="Login">
           <input type="submit" value="Logout" />
       </form>
 </body>
