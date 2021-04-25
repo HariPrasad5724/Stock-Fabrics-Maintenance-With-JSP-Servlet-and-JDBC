@@ -15,6 +15,7 @@ public class Login extends HttpServlet {
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Login</title>");
+        out.println("<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css>");
         out.println("</head>");
         out.println("<body>");
         out.println("<br><h1>Welcome to the Stock and Bill Maintenance Portal</h1>");

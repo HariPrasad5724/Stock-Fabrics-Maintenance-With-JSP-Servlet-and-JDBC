@@ -56,6 +56,7 @@
 <html>
    <head>
       <title>Adding Stock</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
    <h1>Added successfully</h1>

@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Search Fabric</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
 <h1> Fabric status is displayed below</h1>
