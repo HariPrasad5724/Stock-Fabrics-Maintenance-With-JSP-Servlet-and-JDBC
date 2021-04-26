@@ -24,7 +24,7 @@
           {
                   out.println("NULL");
           }
-      %> please select the operations listed below </h1><br><br>
+      %><br> <br>please select the operations listed below </h1><br>
 <h1> Enter the details of the fabric to be inserted  :</h1>
 <form action="Insert.html">
   <input type="submit" id="insertstock" value="Insert" />

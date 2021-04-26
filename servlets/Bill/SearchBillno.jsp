@@ -67,6 +67,7 @@
                 }
     }
       %></h1>
+      <br>
       <h2>To Move Home click the button below</h2>
       <br>
       <form action="Home.jsp">
