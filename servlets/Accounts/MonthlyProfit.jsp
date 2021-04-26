@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
-   <h1>Calculating....</h1>
    <%
     String years=request.getParameter("year");
     String month=request.getParameter("month");

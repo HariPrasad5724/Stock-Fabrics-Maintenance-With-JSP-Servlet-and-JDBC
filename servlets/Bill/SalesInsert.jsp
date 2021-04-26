@@ -35,7 +35,7 @@
 
 <html>
    <head>
-      <title>Adding Sales Bill</title>
+      <title>Adding Purchase Bill</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>

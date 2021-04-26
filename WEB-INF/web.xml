@@ -35,23 +35,4 @@
   <servlet-name>Login</servlet-name>
   <url-pattern>/servlets/Login</url-pattern>
   </servlet-mapping>
-
-  <servlet>
-  <servlet-name>Login2</servlet-name>
-  <servlet-class>Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>Login2</servlet-name>
-  <url-pattern>/servlets/Stock/Login</url-pattern>
-  </servlet-mapping>
-
-  <servlet>
-  <servlet-name>Login3</servlet-name>
-  <servlet-class>Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>Login3</servlet-name>
-  <url-pattern>/servlets/Bill/Login</url-pattern>
-  </servlet-mapping>
-
 </web-app>
