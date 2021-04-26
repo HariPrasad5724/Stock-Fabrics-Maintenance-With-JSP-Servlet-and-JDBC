@@ -45,7 +45,7 @@
       <br>
    <h2>To logout click the button below</h2>
       <br>
-      <form action="Login">
+      <form action="../Login">
           <input type="submit" value="Logout" />
       </form>
 </html>
