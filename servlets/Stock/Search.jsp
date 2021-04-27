@@ -38,7 +38,7 @@
 %>
 <%
          //Search in Cookies
-         Cookie cookie = null;
+        /* Cookie cookie = null;
          Cookie[] cookies = null;
          cookies = request.getCookies();
          if( cookies != null ) {
@@ -49,7 +49,7 @@
                         out.println("<br><br>Stock Found in cookies");
                     }
               }
-          }
+          }*/
       %></h1>
       <br>
       <h2>To Move Home click the button below</h2>
