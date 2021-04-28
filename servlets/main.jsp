@@ -32,6 +32,11 @@
           <input type="submit" id="account" value="Accounting Finance" />
       </form>
       <br>
+      <h2>To maintain Customer details and their requirements click the button below</h2>
+      <form action="./Customer/Home.jsp">
+          <input type="submit" id="customer" value="Customer Maintenance" />
+      </form>
+      <br>
       <h2>To logout click the button below</h2>
       <br>
       <form action="Login">

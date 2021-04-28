@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-<h1> Fabric status is displayed below</h1>
 <h1>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
@@ -23,7 +22,7 @@
                       ResultSet rs = ps.executeQuery();
                       while(rs.next())
                       {
-                            out.println("Found Bill no:" + rs.getString(1)+" Customer name "+rs.getString(2)+" Income cost "+rs.getString(3));
+                            out.println("Bill no:" + rs.getString(1)+"<br> Customer Name: "+rs.getString(2)+"<br> Amount Recieved: "+rs.getString(3));
                       }
              }
 	     catch(Exception e)

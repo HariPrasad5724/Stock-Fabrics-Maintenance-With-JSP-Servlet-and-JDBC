@@ -2,42 +2,34 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 
 <%
-   //JDBC Delete
-   String ftype=request.getParameter("type");
-   String fcolor=request.getParameter("color");
-   String fgsm=request.getParameter("gsm");
-   String fid="1";
-   try
-	     {
+try
+ {
                       Connection con=null;
                       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
-                      String sql = "delete from StockItems where fabtype='"+ftype+"' and color='"+fcolor+"' and gsm='"+fgsm+"' and stockid='"+fid+"'"; 
+                      String sql = "select customer_name,customer_phone from AvailableCustomers ";
                       PreparedStatement ps = con.prepareStatement(sql);
                       ResultSet rs = ps.executeQuery();
-                      if(rs.next())
+                      while(rs.next())
                       {
+                          out.println("<br>");
+                            out.println("<h2>List of Customer Available currently with requested products!</h2>");
                             out.println("<br>");
-                            out.println("<h1>Removed the Fabric!</h1>");
-                             out.println("<br>");
-                      }
-                      else
-                      {
                             out.println("<br>");
-                            out.println("<h1>Try again!</h1>");
-                             out.println("<br>");
+                            out.println("<h1>Requested Customer name: "+rs.getString(1)+"</h1>");
+                            out.println("<br>");
+                            out.println("<h1>Requested Customer Phone number: "+rs.getString(2)+"</h1>");
+                            out.println("<br>");
                       }
              }
 		catch(Exception e)
 		{
-                     out.println("<br>");
-                     out.println("<h1>Fabric Not Found!</h1><br>");
-                     out.println("<h1>"+e+"</h1>");
-                     out.println("<br>");
+                    out.println(e);
 		}
 %>
+
 <html>
    <head>
-      <title>Remove Stock</title>
+      <title>Ready Customers</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
@@ -47,7 +39,6 @@
       <form action="Home.jsp">
           <input type="submit" id="home" value="Go to Home" />
       </form>
-      <br>
    <h2>To logout click the button below</h2>
       <br>
       <form action="../Login">

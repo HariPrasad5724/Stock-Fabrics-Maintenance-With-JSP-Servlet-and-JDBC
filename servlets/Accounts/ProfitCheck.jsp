@@ -26,20 +26,27 @@
                                 ResultSet rs2 = ps2.executeQuery();
                                 if (rs2.next()) {
                                     int Ecost = rs2.getInt("sum(expcost)");
-                                    out.println("Calculated..\n");
                                     int tot = Icost - Ecost;
-                                    out.println("The total profit is "+tot);
+                                     out.println("<br>");
+                                    out.println("<h1>The total profit is "+tot+"</h1>");
+                                     out.println("<br>");
                                 }
                                 else {
-                                    out.println("Something went wrong while calculating!!");
+                                     out.println("<br>");
+                                    out.println("<h1>Something went wrong while calculating!!</h1>");
+                                     out.println("<br>");
                                 }
                             } catch (Exception e) {
-                                out.println(e);
+                                 out.println("<br>");
+                                out.println("<h1>"+e+"</h1>");
+                                 out.println("<br>");
                             }
                         }
                     }
                 catch (Exception e) {
-                    out.println(e);
+                     out.println("<br>");
+                    out.println("<h1>"+e+"</h1>");
+                     out.println("<br>");
      }
 %>
    <h2>To Move Home click the button below</h2>

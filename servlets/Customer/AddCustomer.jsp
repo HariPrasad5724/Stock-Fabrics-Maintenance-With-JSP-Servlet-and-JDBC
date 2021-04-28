@@ -2,47 +2,43 @@
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 
 <%
-   //JDBC Insertion
-   String cname =request.getParameter("cname");
-   String billno=request.getParameter("billno");
-   String weight=request.getParameter("weight");
-   String amount=request.getParameter("amount");
-   String day=request.getParameter("day");
-   String month=request.getParameter("month");
-   String year=request.getParameter("year");
-        try
+   String name =request.getParameter("c_name");
+   String phone=request.getParameter("c_phone");
+   String type=request.getParameter("c_type");
+   String color=request.getParameter("c_color");
+   String gsm=request.getParameter("c_gsm");
+   try
 	     {
                       Connection con=null;
                       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
-                      String sql = "insert into IncomeBills values('" +cname+ "','" +billno+ "','" +weight+ "','" +amount+ "','" +day+ "','" +month+ "','" +year+ "')";
+                      String sql = "insert into CustomerDetails values('" +name+ "','" +phone+ "','" +type+ "','" +color+ "','" +gsm+ "')";
                       PreparedStatement ps = con.prepareStatement(sql);
                       ResultSet rs = ps.executeQuery();
                       if(rs.next())
                       {
-                         out.println("<br>");
-                           out.println("<h1>Sales Bill Added Successfully!<h1>");
-                           out.println("<br>");
+                            out.println("<br>");
+                            out.println("<h1>CUSTOMER ADDED SUCCESSFULLY!</h1>");
+                            out.println("<br>");
                       }
                       else
                       {
-                         out.println("<br>");
-                           out.println("<h1>Bill Not Inserted<h1>");
-                           out.println("<br>");
+                            out.println("<br>");
+                            out.println("<h1>PLEASE TRY AGAIN LATER</h1>");
+                            out.println("<br>");
                       }
              }
 		catch(Exception e)
 		{
-                out.println("<h1>"+e+"</h1>");
+                    out.println(e);
 		}
 %>
 
 <html>
    <head>
-      <title>Adding Purchase Bill</title>
+      <title>Add Customer</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
-   <h1>Added successfully</h1>
    <br>
    <h2>To Move Home click the button below</h2>
       <br>

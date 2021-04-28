@@ -19,17 +19,21 @@
                       ResultSet rs = ps.executeQuery();
                       if(rs.next())
                       {
-                           out.println("Sales Bill Inserted Successfully!");
+                         out.println("<br>");
+                           out.println("<h1>Sales Bill Inserted Successfully!<h1>");
+                           out.println("<br>");
                       }
                       else
                       {
-                           out.println("Bill Not Inserted");
+                         out.println("<br>");
+                           out.println("<h1>Bill Not Inserted</h1>");
+                           out.println("<br>");
 
                       }
              }
 		catch(Exception e)
 		{
-                out.println(e);
+                out.println("<h1>"+e+"</h1>");
 		}
 %>
 

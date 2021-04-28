@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Customer and thier requirements</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+</head>
+<body>
+<h1> Enter the details of the customer </h1>
+<form action="AddCustomer.jsp" method="GET">
+    <h1>Customer Name: <input type="text" id="c_name" name="c_name" /></h1>
+    <h1>Customer Phone Number: <input type="number" id="c_phone" name="c_phone" /><h1>
+    <h1>Required Fabric Type: <input type="text" id="c_type" name="c_type" /></h1>
+    <h1>Required Fabric Color: <input type="text" id="c_color" name="c_color" /></h1>
+    <h1>Required Fabric GSM: <input type="number"  id="c_gsm" name="c_gsm" /><br>
+    <input type="submit" id="addcustomer" value="Add Customer" /><br>
+    <h2>To logout click the button below</h2>
+      <br>
+      <form action="../Login">
+          <input type="submit" value="Logout" />
+      </form>
+</form>
+</body>
+</html>

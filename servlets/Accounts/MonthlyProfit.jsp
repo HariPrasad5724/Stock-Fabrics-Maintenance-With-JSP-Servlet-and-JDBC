@@ -5,7 +5,7 @@
 
 <html>
    <head>
-      <title>Calculating Monthly Expenses</title>
+      <title>Monthly Expenses</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
@@ -28,22 +28,30 @@
                                 ResultSet rs2 = ps2.executeQuery();
                                 if (rs2.next()) {
                                     int Ecost = rs2.getInt("sum(expcost)");
-                                    out.println("Calculated..");
                                     int tot = Icost - Ecost;
-                                    out.println("The total profit from the Month  " + month +" and Year "+years+" is "+tot);
+                                     out.println("<br>");
+                                    out.println("<h1>The total profit from the Month  " + month +" and Year "+years+" is "+tot+"</h1>");
+                                     out.println("<br>");
                                 } 
                                 else {
-                                    out.println("Something went wrong while calculating!!");
+                                     out.println("<br>");
+                                    out.println("<h1>Something went wrong while calculating!!</h1>");
+                                     out.println("<br>");
                                 }
                             } catch (Exception e) {
-                                out.println(e);
+                                 out.println("<br>");
+                                out.println("<h1>"+e+"</h1>");
+                                 out.println("<br>");
                             }
                         }
                     }
                     catch (Exception e) {
+                         out.println("<br>");
                         out.println(e);
+                         out.println("<br>");
          }
 %>
+<br>
    <h2>To Move Home click the button below</h2>
       <br>
       <form action="Home.jsp">

@@ -39,27 +39,31 @@
                       ResultSet rs = ps.executeQuery();
                       if(rs.next())
                       {
-                           out.println("Fabric Inserted Successfully!");
+                           out.println("<br>");
+                           out.println("<h1>Fabric Inserted Successfully!</h1>");
+                           out.println("<br>");
                       }
                       else
                       {
-                           out.println("Fabric Not Inserted");
-
+                           out.println("<br>");
+                           out.println("<h1>Fabric Not Inserted</h1>");
+                           out.println("<br>");
                       }
              }
 		catch(Exception e)
 		{
-                out.println(e);
+                out.println("<br>");
+                out.println("<h1>"+e+"</h1>");
+                out.println("<br>");
 		}
 %>
 
 <html>
    <head>
-      <title>Adding Stock</title>
+      <title>Add Stock</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
-   <h1>Added successfully</h1>
    <br>
    <h2>To Move Home click the button below</h2>
       <br>

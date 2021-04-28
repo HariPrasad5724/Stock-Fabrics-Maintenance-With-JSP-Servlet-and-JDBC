@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-<h1> Fabric status is displayed below</h1>
 <h1>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
@@ -27,11 +26,14 @@
                             String name=rs.getString("customer_name");
                             int wgt=rs.getInt("weight");
                             int cost=rs.getInt("inccost");
-                            out.println("Available "+name+" "+wgt+" "+cost);
+                            out.println("<h1>Customer is Available </h1>");
+                            out.println("<h1>Customer Name: "+name+"</h1>");
+                            out.println("<h1>Total Weight Purchased: "+wgt+"</h1>");
+                            out.println("<h1>Amount Recieved: "+cost+"</h1>");
                       }
                       else
                       {
-                          out.println("Not available");
+                          out.println("<h1>Bill no unavailable</h1>");
                       }
                 }
                 catch(Exception e)

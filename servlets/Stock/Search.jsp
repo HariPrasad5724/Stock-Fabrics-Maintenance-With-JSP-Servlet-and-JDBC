@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 </head>
 <body>
-<h1> Fabric status is displayed below</h1>
 <h1>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
@@ -18,22 +17,30 @@
 	     {
                       Connection con=null;
                       con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","system","57241516");
-                      out.println("Connected to DB...");
                       String sql = "select weight,cost,stockid from StockItems where fabtype = '"+ftype+"' and color = '"+fcolor+"' and gsm = '"+fgsm+"'";    
                       PreparedStatement ps = con.prepareStatement(sql);
                       ResultSet rs = ps.executeQuery();
                       if(rs.next())
                       {
-                            out.println("<br><br>Fabric is available in Database!");
+                             out.println("<h1>Fabric is available in Stock room id  "+rs.getString(3) +"!</h1>");
+                             out.println("<br>");
+                             out.println("<h1>Total Weight available is "+rs.getString(1) +"</h1>");
+                             out.println("<br>");
+                             out.println("<h1>The cost per Kg is "+rs.getString(2)+" !</h1>");
+                             out.println("<br>");
                       }
                       else
                       {
-                            out.println("<br><br>Fabric is unavailable in Database!");
+                           out.println("<br>");
+                           out.println("<h1>Fabric is unavailable in Stock room!</h1>");
+                           out.println("<br>");
                       }
              }
 	     catch(Exception e)
 	     {
+                    out.println("<br>");
                     out.println(e);
+                    out.println("<br>");
 	     }
 %>
 <%
