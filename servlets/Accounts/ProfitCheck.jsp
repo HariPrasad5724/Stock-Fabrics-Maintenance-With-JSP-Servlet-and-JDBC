@@ -4,11 +4,10 @@
 
 <html>
    <head>
-      <title>Calculating The Total Profit from the initial days</title>
+      <title>Total Profit from initial days</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
    </head>
    <body>
-   <h1>Calculating....</h1>
 <%
    try {
                 Connection con = null;
